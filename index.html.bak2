@@ -1,0 +1,88 @@
+﻿
+<!DOCTYPE html><html lang="en"><head><title>Sign-in</title><meta name="description" content="Sign-in"/><meta name="charset" content="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="icon" type="image/svg+xml" href="https://d1dkulh9pqc6xi.cloudfront.net/assets/us-east-2_MlnzCFgHk/704594f2-1202-46ac-93d9-40a13933a765/3254e1f6-d9f0-4661-b65e-221d12b8b312/light-favicon_svg.svg"/><link rel="icon" type="image/svg+xml" media="(prefers-color-scheme: light)" href="https://d1dkulh9pqc6xi.cloudfront.net/assets/us-east-2_MlnzCFgHk/704594f2-1202-46ac-93d9-40a13933a765/3254e1f6-d9f0-4661-b65e-221d12b8b312/light-favicon_svg.svg"/><link rel="icon" type="image/svg+xml" media="(prefers-color-scheme: dark)" href="https://d1dkulh9pqc6xi.cloudfront.net/assets/us-east-2_MlnzCFgHk/704594f2-1202-46ac-93d9-40a13933a765/3254e1f6-d9f0-4661-b65e-221d12b8b312/dark-favicon_svg.svg"/><link rel="icon" type="image/x-icon" href="https://d1dkulh9pqc6xi.cloudfront.net/assets/us-east-2_MlnzCFgHk/704594f2-1202-46ac-93d9-40a13933a765/3254e1f6-d9f0-4661-b65e-221d12b8b312/light-favicon_ico.ico"/><link rel="icon" type="image/x-icon" media="(prefers-color-scheme: light)" href="https://d1dkulh9pqc6xi.cloudfront.net/assets/us-east-2_MlnzCFgHk/704594f2-1202-46ac-93d9-40a13933a765/3254e1f6-d9f0-4661-b65e-221d12b8b312/light-favicon_ico.ico"/><link rel="icon" type="image/x-icon" media="(prefers-color-scheme: dark)" href="https://d1dkulh9pqc6xi.cloudfront.net/assets/us-east-2_MlnzCFgHk/704594f2-1202-46ac-93d9-40a13933a765/3254e1f6-d9f0-4661-b65e-221d12b8b312/dark-favicon_ico.ico"/><link rel="stylesheet" href="https://d8sdinqd7i1db.cloudfront.net/3a4hal6jgl8gf5hnnjo06k05s5/theme-1761770757000-b54ed797-c3a7-4b21-9544-ded876e90788.css"/><link rel="stylesheet" href="css/chunk-RG3SQ5IQ-C0xy4Utc.css"/><link rel="stylesheet" href="css/index-DveA1qCj.css"/><link rel="stylesheet" href="css/root-BlModAeJ.css"/><link rel="stylesheet" href="css/chunk-P3HYGXCB-X0ftOJC4.css"/><link rel="stylesheet" href="css/chunk-ZNDB273M-7cR-1RS9.css"/><link rel="stylesheet" href="css/chunk-NSYVNWS4-CG4JNlMV.css"/><link rel="stylesheet" href="css/index-BIw4z1xx.css"/><link rel="stylesheet" href="css/internal-B0klPiPs.css"/><link rel="stylesheet" href="css/index-CeXGYqWF.css"/></head><body class="awsui-comfortable-mode"><script nonce="1fa13b4ca2edff5af1de0e8058c697193590362de1e9f4ae26665e650c792190">((colorModeSetting) => {
+  const userPreferredColorMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  const colorMode = colorModeSetting === "dynamic" || !["light", "dark"].includes(colorModeSetting) ? userPreferredColorMode : colorModeSetting;
+  if (colorMode === "dark") {
+    document.documentElement.classList.add("awsui-dark-mode");
+    document.body.classList.add("awsui-dark-mode");
+  }
+})('dynamic')</script><main class="main-layout content-vertical-position-center content-horizontal-position-center"><div class="cognito-form-area"><div class="awsui_root_18582_1jqoe_145 awsui_vertical_18582_1jqoe_192 awsui_vertical-l_18582_1jqoe_210"><div class="awsui_child_18582_1jqoe_149"><div class="cognito-form-container"><div class="awsui_root_18582_1jqoe_145 awsui_vertical_18582_1jqoe_192 awsui_vertical-l_18582_1jqoe_210"><div class="awsui_child_18582_1jqoe_149"><div data-analytics-funnel-step="1" class="awsui_root_1i0s3_t4z6f_145"><div class="awsui_content_1i0s3_t4z6f_181"><div class="awsui_root_18582_1jqoe_145 awsui_vertical_18582_1jqoe_192 awsui_vertical-l_18582_1jqoe_210"><div class="awsui_child_18582_1jqoe_149"><div class="cognito-form-logo-box cognito-form-logo-center"><picture><source srcSet="https://d1dkulh9pqc6xi.cloudfront.net/assets/us-east-2_MlnzCFgHk/704594f2-1202-46ac-93d9-40a13933a765/3254e1f6-d9f0-4661-b65e-221d12b8b312/light-form_logo.svg" media="(prefers-color-scheme: light)"/><source srcSet="https://d1dkulh9pqc6xi.cloudfront.net/assets/us-east-2_MlnzCFgHk/704594f2-1202-46ac-93d9-40a13933a765/3254e1f6-d9f0-4661-b65e-221d12b8b312/dark-form_logo.svg" media="(prefers-color-scheme: dark)"/><img class="cognito-form-logo" src="https://d1dkulh9pqc6xi.cloudfront.net/assets/us-east-2_MlnzCFgHk/704594f2-1202-46ac-93d9-40a13933a765/3254e1f6-d9f0-4661-b65e-221d12b8b312/light-form_logo.svg" alt="Form logo"/></picture></div></div><div class="awsui_child_18582_1jqoe_149"><div class="awsui_root_18582_1jqoe_145 awsui_vertical_18582_1jqoe_192 awsui_vertical-xxs_18582_1jqoe_198"><div class="awsui_child_18582_1jqoe_149"><h2 class="cognito-form-header">Sign in</h2></div></div></div><div class="awsui_child_18582_1jqoe_149"><div class="cognito-nestable-col"><div class="sections"><div class="section"><div class="awsui_root_18582_1jqoe_145 awsui_vertical_18582_1jqoe_192 awsui_vertical-s_18582_1jqoe_204"><div class="awsui_child_18582_1jqoe_149"><h4 class="awsui_root_18wu0_5byw0_920 awsui_box_18wu0_5byw0_172 awsui_h4-variant_18wu0_5byw0_176 awsui_color-default_18wu0_5byw0_172 awsui_font-size-default_18wu0_5byw0_188 awsui_font-weight-default_18wu0_5byw0_228">With other accounts</h4></div><div class="awsui_child_18582_1jqoe_149"><div class="awsui_root_18582_1jqoe_145 awsui_vertical_18582_1jqoe_192 awsui_vertical-s_18582_1jqoe_204"><div class="awsui_child_18582_1jqoe_149"><span class="idp-button-Google-b5948be2"><a class="awsui_button_vjswe_14izv_157 awsui_variant-normal_vjswe_14izv_205 awsui_full-width_vjswe_14izv_563 awsui_link_vjswe_14izv_609" data-analytics-funnel-value="button:R39tf55:" href="#" data-social-login="true"><span class="awsui_icon_vjswe_14izv_585 awsui_icon-left_vjswe_14izv_585 awsui_icon_h11ix_j12ko_189 awsui_size-normal-mapped-height_h11ix_j12ko_248 awsui_size-normal_h11ix_j12ko_244 awsui_variant-normal_h11ix_j12ko_320" aria-hidden="true"><picture><source srcSet="https://d1dkulh9pqc6xi.cloudfront.net/default-assets/icon/cognito-icon-idp-google-light.svg" media="(prefers-color-scheme: light)"/><source srcSet="https://d1dkulh9pqc6xi.cloudfront.net/default-assets/icon/cognito-icon-idp-google-dark.svg" media="(prefers-color-scheme: dark)"/><img class="Google_icon idp-icon" src="https://d1dkulh9pqc6xi.cloudfront.net/default-assets/icon/cognito-icon-idp-google-light.svg" alt="Google icon"/></picture></span><span class="awsui_content_vjswe_14izv_153 awsui_label_1f1d4_ocied_5">Sign in with Google</span></a></span></div><div class="awsui_child_18582_1jqoe_149"><span class="idp-button"><a class="awsui_button_vjswe_14izv_157 awsui_variant-normal_vjswe_14izv_205 awsui_full-width_vjswe_14izv_563 awsui_link_vjswe_14izv_609" data-analytics-funnel-value="button:R59tf55:" href="#" data-social-login="true"><span class="awsui_icon_vjswe_14izv_585 awsui_icon-left_vjswe_14izv_585 awsui_icon_h11ix_j12ko_189 awsui_size-normal-mapped-height_h11ix_j12ko_248 awsui_size-normal_h11ix_j12ko_244 awsui_variant-normal_h11ix_j12ko_320" aria-hidden="true"><picture><source srcSet="https://d1dkulh9pqc6xi.cloudfront.net/default-assets/icon/cognito-icon-idp-apple-light.svg" media="(prefers-color-scheme: light)"/><source srcSet="https://d1dkulh9pqc6xi.cloudfront.net/default-assets/icon/cognito-icon-idp-apple-dark.svg" media="(prefers-color-scheme: dark)"/><img class="SignInWithApple_icon idp-icon" src="https://d1dkulh9pqc6xi.cloudfront.net/default-assets/icon/cognito-icon-idp-apple-light.svg" alt="SignInWithApple icon"/></picture></span><span class="awsui_content_vjswe_14izv_153 awsui_label_1f1d4_ocied_5">Continue with Apple</span></a></span></div><div class="awsui_child_18582_1jqoe_149"><span class="idp-button-Facebook-2ece89df"><a class="awsui_button_vjswe_14izv_157 awsui_variant-normal_vjswe_14izv_205 awsui_full-width_vjswe_14izv_563 awsui_link_vjswe_14izv_609" data-analytics-funnel-value="button:R79tf55:" href="#" data-social-login="true"><span class="awsui_icon_vjswe_14izv_585 awsui_icon-left_vjswe_14izv_585 awsui_icon_h11ix_j12ko_189 awsui_size-normal-mapped-height_h11ix_j12ko_248 awsui_size-normal_h11ix_j12ko_244 awsui_variant-normal_h11ix_j12ko_320" aria-hidden="true"><picture><source srcSet="https://d1dkulh9pqc6xi.cloudfront.net/default-assets/icon/cognito-icon-idp-facebook-light.svg" media="(prefers-color-scheme: light)"/><source srcSet="https://d1dkulh9pqc6xi.cloudfront.net/default-assets/icon/cognito-icon-idp-facebook-dark.svg" media="(prefers-color-scheme: dark)"/><img class="Facebook_icon idp-icon" src="https://d1dkulh9pqc6xi.cloudfront.net/default-assets/icon/cognito-icon-idp-facebook-light.svg" alt="Facebook icon"/></picture></span><span class="awsui_content_vjswe_14izv_153 awsui_label_1f1d4_ocied_5">Continue with Facebook</span></a></span></div></div></div></div></div><div class="section"><div class="or-separator-horizontal"><span class="or-text">Or</span></div><form method="POST" action="/login" id="primary-form" aria-label="primary-form" novalidate="" data-discover="true"><input type="hidden" name="csrf" value="PMT3KRfpeaWF/90V7S17RMTWhLCCmwko7GD1ArwpjOe8IOPG+GZ+KMIU4L8QJylHsBdaSCFg+0wUbUTeVDtY7tGM0XPEhNZizl47SuRfxiL5h1kLna2CIptp/jnxIrXgWqnq/1kJD9lMZGNprnil+b5upQ5Z9E80AEY88OtfCOE="/><div class="awsui_root_18582_1jqoe_145 awsui_vertical_18582_1jqoe_192 awsui_vertical-l_18582_1jqoe_210"><div class="awsui_child_18582_1jqoe_149"><h4 class="awsui_root_18wu0_5byw0_920 awsui_box_18wu0_5byw0_172 awsui_h4-variant_18wu0_5byw0_176 awsui_color-default_18wu0_5byw0_172 awsui_font-size-default_18wu0_5byw0_188 awsui_font-weight-default_18wu0_5byw0_228">With existing account</h4></div><div class="awsui_child_18582_1jqoe_149"><div class="awsui_root_14mhv_8dwez_236" data-analytics-field-label="[id=&quot;formField:Rkqtf55:-label&quot;]"><div class="awsui_label-wrapper_14mhv_8dwez_311"><label class="awsui_label_14mhv_8dwez_269 awsui_label_aqu00_ocied_5" id="formField:Rkqtf55:-label" for="formField:Rkqtf55:">Email address</label></div><div class="awsui_controls_14mhv_8dwez_308"><div class="awsui_grid_14yj0_tjzwn_145"><div class="awsui_grid-column_14yj0_tjzwn_186 awsui_colspan-12_14yj0_tjzwn_307"><div class="awsui_restore-pointer-events_14yj0_tjzwn_357"><div class="awsui_control_14mhv_8dwez_308"><div class="awsui_root_2rhyz_uz5yt_145 awsui_input-container_2rhyz_uz5yt_310" dir="ltr"><input aria-labelledby="formField:Rkqtf55:-label" name="username" placeholder="name@host.com" autofocus="" id="formField:Rkqtf55:" class="awsui_input_2rhyz_uz5yt_149" autoComplete="on" type="email" inputMode="email" value=""/></div></div></div></div></div></div></div></div><div class="awsui_child_18582_1jqoe_149"><div class="awsui_root_14mhv_8dwez_236"><div class="awsui_label-wrapper_14mhv_8dwez_311"><label class="awsui_label_14mhv_8dwez_269 awsui_label_aqu00_ocied_5" for="custom-password">Password</label></div><div class="awsui_controls_14mhv_8dwez_308"><div class="awsui_grid_14yj0_tjzwn_145"><div class="awsui_grid-column_14yj0_tjzwn_186 awsui_colspan-12_14yj0_tjzwn_307"><div class="awsui_restore-pointer-events_14yj0_tjzwn_357"><div class="awsui_control_14mhv_8dwez_308"><div class="awsui_root_2rhyz_uz5yt_145 awsui_input-container_2rhyz_uz5yt_310" dir="ltr"><input name="password" placeholder="Enter password" id="custom-password" class="awsui_input_2rhyz_uz5yt_149" autocomplete="current-password" type="password" /></div></div></div></div></div></div></div></div><div class="awsui_child_18582_1jqoe_149"><p id="login-error" class="awsui_root_18wu0_5byw0_920 awsui_box_18wu0_5byw0_172 awsui_color-text-status-error_18wu0_5byw0_172" role="alert" style="display:none;margin:0;">Invalid email or password.</p></div><div class="awsui_child_18582_1jqoe_149"><div class="awsui_root_18582_1jqoe_145 awsui_vertical_18582_1jqoe_192 awsui_vertical-xs_18582_1jqoe_201"><div class="awsui_child_18582_1jqoe_149"><button class="awsui_button_vjswe_14izv_157 awsui_variant-primary_vjswe_14izv_230 awsui_full-width_vjswe_14izv_563" data-analytics-funnel-value="button:R1sqtf55:" type="submit"><span class="awsui_content_vjswe_14izv_153 awsui_label_1f1d4_ocied_5">Next</span></button></div><div class="awsui_child_18582_1jqoe_149"><div class="cognito-form-action-text-block"><p class="awsui_root_18wu0_5byw0_920 awsui_box_18wu0_5byw0_172 awsui_p-variant_18wu0_5byw0_172 awsui_p-n_18wu0_5byw0_399 awsui_color-default_18wu0_5byw0_172 awsui_font-size-default_18wu0_5byw0_188 awsui_font-weight-default_18wu0_5byw0_228">New user? <a id="link-self:Rasqtf55H1:" class="awsui_link_4c84z_16v8t_145 awsui_variant-secondary_4c84z_16v8t_211 awsui_font-size-body-m_4c84z_16v8t_475" data-analytics-funnel-value="link:Rasqtf55:" href="/signup">Create an account</a></p></div></div></div></div></div><input type="hidden" name="cognitoAsfData" value=""/></form></div></div></div></div></div></div></div></div></div></div></div></div></div></main><script nonce="1fa13b4ca2edff5af1de0e8058c697193590362de1e9f4ae26665e650c792190">((STORAGE_KEY, restoreKey) => {
+    if (!window.history.state || !window.history.state.key) {
+      let key = Math.random().toString(32).slice(2);
+      window.history.replaceState({
+        key
+      }, "");
+    }
+    try {
+      let positions = JSON.parse(sessionStorage.getItem(STORAGE_KEY) || "{}");
+      let storedY = positions[restoreKey || window.history.state.key];
+      if (typeof storedY === "number") {
+        window.scrollTo(0, storedY);
+      }
+    } catch (error) {
+      console.error(error);
+      sessionStorage.removeItem(STORAGE_KEY);
+    }
+  })("positions", null)</script><script>
+document.addEventListener("DOMContentLoaded", function () {
+  var form = document.getElementById("primary-form");
+  if (!form) return;
+
+  var submitLabel = form.querySelector('button[type="submit"] .awsui_label_1f1d4_ocied_5');
+  if (submitLabel) submitLabel.textContent = "Sign in";
+
+  var socialLinks = document.querySelectorAll('a[data-social-login="true"]');
+  socialLinks.forEach(function (a) {
+    a.addEventListener("click", function (e) {
+      e.preventDefault();
+      var error = document.getElementById("login-error");
+      if (error) {
+        error.textContent = "Social login is not configured yet.";
+        error.style.display = "block";
+      }
+    });
+  });
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+    var emailInput = form.querySelector('input[type="email"]');
+    var passwordInput = form.querySelector('input[type="password"]');
+    var error = document.getElementById("login-error");
+    var submitButton = form.querySelector('button[type="submit"]');
+
+    var email = emailInput ? emailInput.value.trim() : "";
+    var password = passwordInput ? passwordInput.value : "";
+
+    if (!email || !password) {
+      if (error) {
+        error.textContent = "Email and password are required.";
+        error.style.display = "block";
+      }
+      return;
+    }
+
+    if (error) error.style.display = "none";
+    if (submitButton) submitButton.disabled = true;
+
+    try {
+      var res = await fetch("/api/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+        body: JSON.stringify({ email: email, password: password })
+      });
+
+      if (!res.ok) throw new Error("Login failed");
+      window.location.href = "/dashboard";
+    } catch (err) {
+      if (error) {
+        error.textContent = "Login failed. Please check your credentials and try again.";
+        error.style.display = "block";
+      }
+    } finally {
+      if (submitButton) submitButton.disabled = false;
+    }
+  });
+});
+</script></body></html>
+
